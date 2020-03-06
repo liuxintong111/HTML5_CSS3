@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset id="fieldset1">
+        <legend id="testlenged">学生档案</legend>
+        <form id="testform" method="get" action="#s">
+            姓名：<br/><input type="text" name="name1" placeholder="请输入姓名" autofocus="autofocus" autocomplete="on">
+            <br/>
+            学号：<br/><input type="number" name="no1" placeholder="请输入学号" autofocus="autofocus" autocomplete="on">
+            <br/>
+            手机号码：<br/><input type="text" name="phonenumber1" placeholder="请输入手机号" autofocus="autofocus" autocomplete="on">
+            <br/>
+            邮箱地址：<br/><input type="text" name="email1" placeholder="请输入邮箱地址" autofocus="autofocus" autocomplete="on">
+            <br/>
+            录取学校：<br/><input type="search" name="search1" list="names" autofocus="autofocus" autocomplete="on">
+                <datalist id="names">
+                    <option>河北师范大学</option>
+                    <option>河北科技大学</option>
+                    <option>河北大学</option>
+                    <option>河北工业大学</option>
+                    <option>石家庄铁道大学</option>
+                    <option>燕山大学</option>                    
+                </datalist>
+            <br/>
+            入学成绩：<br/><input type="text" name="score1" autofocus="autofocus" autocomplete="on">
+            <br/>
+            入学时间：<br/><input type="date" name="date1" placeholder="请输入姓名" autofocus="autofocus" autocomplete="on">
+            <br/>
+            <input type="submit" value="提交" id="sub">
+        </form>
+    </fieldset>
+</body>
+<script>
+    var inputlist=document.getElementsByTagName("input");
+    for(var i=0;i<inputlist.length;i++){
+        inputlist[i].style.width="200px";
+        inputlist[i].style.height="20px";
+
+    }
+    var testlenged=document.getElementById("testlenged");
+    testlenged.style.color="red";
+    var fieldset1=document.getElementById("fieldset1");
+    fieldset1.style.width="250px";
+    var sub=document.getElementById("sub");
+    sub.style.backgroundcolor="#ccc";
+</script>
+</html>
