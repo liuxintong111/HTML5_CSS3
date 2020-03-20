@@ -25,8 +25,13 @@
             width:20px;
             height:20px;
             border:1px solid black;
-            margin-top:30px;
-            margin-left:20px;
+            /* margin-top:30px;
+            margin-left:20px; */
+            position: relative;
+            top:30px;
+            left:20px;
+            margin-left: 20px;
+
             display: inline-block;
 
         }
@@ -50,12 +55,12 @@
     <legend id="legend1">网页换肤</legend>
     <div id="container">
         <header>
-            <div class="colordiv"></div>
-            <div class="colordiv"></div>
-            <div class="colordiv"></div>
-            <div class="colordiv"></div>
-            <div class="colordiv"></div>
-            <div class="colordiv"></div>
+            <div class="colordiv" id="colordiv0"></div>
+            <div class="colordiv" id="colordiv1"></div>
+            <div class="colordiv" id="colordiv2"></div>
+            <div class="colordiv" id="colordiv3"></div>
+            <div class="colordiv" id="colordiv4"></div>
+            <div class="colordiv" id="colordiv5"></div>
         </header>
         <article>
             <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用</p>
@@ -67,24 +72,51 @@
 <script>
     var colordivlist=document.getElementsByClassName("colordiv");
     var article=document.getElementsByTagName("article")[0];
+    var len=localStorage.length;
     colordivlist[0].style.backgroundColor='#ccc';
     colordivlist[1].style.backgroundColor='red';
     colordivlist[2].style.backgroundColor='pink';
     colordivlist[3].style.backgroundColor='blue';
     colordivlist[4].style.backgroundColor='yellow';
     colordivlist[5].style.backgroundColor='green';
-    article.style.backgroundColor=colordivlist[0].style.backgroundColor;
-    console.log(colordivlist[0].style.paddingTop);
+    // article.style.backgroundColor=colordivlist[0].style.backgroundColor;
+    // colordivlist[0].style.top=20+"px";
+    //console.log(colordivlist[0].style.top);
+    //localStorage.clear();
+    if (len==0) {
+        article.style.backgroundColor = colordivlist[0].style.backgroundColor;
+        colordivlist[0].style.top = "20px";
+    }
+    else {
+        console.log(len);
+        article.style.backgroundColor = localStorage.getItem(len);
+        for (var i = 0; i < colordivlist.length; i++) {
+            if (colordivlist[i].style.backgroundColor == localStorage.getItem(len)) {
+                colordivlist[i].style.top = "20px";
+            }
+        }
+    }
     window.onload=function(){
-        var len=1;
+        
         for(var i=0;i<colordivlist.length;i++){
+            !function(i){
             var a=i;
             
             colordivlist[a].onclick=function(){
                 article.style.backgroundColor=this.style.backgroundColor;
-                window.localStorage.setItem(len++,article.style.backgroundColor);
+                window.localStorage.setItem(++len, article.style.backgroundColor);
+                this.style.top="20px";     
+                var k; 
+                for (var j = 0; j < colordivlist.length; j++) {
+                
+                        if (j != a) {
+                            colordivlist[j].style.top = "30px";
+                        }
+                    }         
+                //window.localStorage.setItem(len++,article.style.backgroundColor);
             
-             }
+            }
+           }(i);
     }
        
     }
