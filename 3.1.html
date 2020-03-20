@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #fieldset1{
+            border:2px solid black;
+            width:600px;
+            height:500px;
+        }
+        #legend1{
+            color:red;
+            font-size: 3em;
+        }
+        header{
+            width:500px;
+            height:80px;
+            border:1px solid black;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+        .colordiv{
+            width:20px;
+            height:20px;
+            border:1px solid black;
+            margin-top:30px;
+            margin-left:20px;
+            display: inline-block;
+
+        }
+        article{
+            width:500px;
+            height:200px;
+            border:1px solid black;
+            background-color: white;
+            margin-top:80px;
+            margin-left:30px;
+        }
+        p{
+            font-size:1.5em;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset id="fieldset1">
+    <legend id="legend1">网页换肤</legend>
+    <div id="container">
+        <header>
+            <div class="colordiv"></div>
+            <div class="colordiv"></div>
+            <div class="colordiv"></div>
+            <div class="colordiv"></div>
+            <div class="colordiv"></div>
+            <div class="colordiv"></div>
+        </header>
+        <article>
+            <p>LocalStorage将数据保存在客户端本地的硬件设备中，即使浏览器被关闭了，该数据仍然存在，下次打开浏览器访问网站时仍然可以继续使用</p>
+        </article>
+    </div>
+    </fieldset>
+
+</body>
+<script>
+    var colordivlist=document.getElementsByClassName("colordiv");
+    var article=document.getElementsByTagName("article")[0];
+    colordivlist[0].style.backgroundColor='#ccc';
+    colordivlist[1].style.backgroundColor='red';
+    colordivlist[2].style.backgroundColor='pink';
+    colordivlist[3].style.backgroundColor='blue';
+    colordivlist[4].style.backgroundColor='yellow';
+    colordivlist[5].style.backgroundColor='green';
+    article.style.backgroundColor=colordivlist[0].style.backgroundColor;
+    console.log(colordivlist[0].style.paddingTop);
+    window.onload=function(){
+        var len=1;
+        for(var i=0;i<colordivlist.length;i++){
+            var a=i;
+            
+            colordivlist[a].onclick=function(){
+                article.style.backgroundColor=this.style.backgroundColor;
+                window.localStorage.setItem(len++,article.style.backgroundColor);
+            
+             }
+    }
+       
+    }
+    
+    
+    
+    
+</script>
+</html>
