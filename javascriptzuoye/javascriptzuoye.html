@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        
+        *{
+                margin: 0;
+                padding: 0;
+                border: 0;
+            }
+            ul{
+                list-style: none;
+            }
+            .box{
+                
+                width: 590px;               
+                height: 400px;                
+                margin: 0 auto;
+                position: relative;               
+            }            
+            .box .img li{               
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .box .prev,.box .next{                
+                width: 25px;                
+                line-height: 50px;              
+                background: rgba(0,0,0,.3);                
+                color: #fff;               
+            }
+            /*设置左箭头的样式*/
+            .box .prev{
+                position: absolute;
+                left: 0;
+                text-align: center;    
+                top: 200px;
+            }
+            /*设置右箭头的样式*/
+            .box .next{
+                position: absolute;
+                right :0;   
+                text-align: center;         
+                top: 200px;
+            }
+            /*设置鼠标进入时的样式*/
+            .box .prev:hover,.box .next:hover{
+                background: rgba(0,0,0,0.7);
+            }
+            /*设置rgba盒子的样式*/
+            .circle{
+                position: relative;
+                top: 430px;
+                left: 250px;
+                width: 120px;
+                height: 28px;
+                border-radius: 10px;
+                }
+            .circle .select{
+                background: black;
+            }
+            .circle li{
+                float: left;
+                height: 20px;
+                width: 20px;
+                border-radius: 10px;
+                background: lightgrey;
+                margin: 4px 5px;
+            }
+
+        
+      </style>
+</head>
+<body>
+    <body>
+        <div class="box">
+            <ul class="img">
+                <li style="opacity: 0;"><img src="1.jpg"></li>
+                <li style="opacity: 0.861785;"><img src="2.jpg"></li>
+                <li style="opacity: 0.138215;"><img src="3.jpg"></li>
+                <li style="opacity: 0;"><img src="4.jpg"></li>
+            </ul>
+            <div class="prev">&lt;</div>
+            <div class="next">&gt;</div>
+            <div class="circle">
+                <ul>
+                    <li class=""></li>
+                    <li class=""></li>
+                    <li class="select"></li>
+                    <li class=""></li>
+                </ul>
+            </div>
+        </div>
+    
+    <script src="js/jquery.js"></script>
+    <script>          
+            $(function(){
+                var count = 1;
+                var imgMaxCount = 4;
+                var imgMinCount = 1;
+                var times = setInterval(
+                    timesCount,2000)
+                $('.box').on({
+                    mouseenter:function(){
+                        clearInterval(times);
+                    },
+                    mouseleave:function(){
+                        times = setInterval(
+                    timesCount,2000);
+                    }
+                })
+                function timesCount(){
+                    count++;
+                    counts();
+                }
+                $('.prev,.next').click(function(){
+                    count = this.className == 'prev'? --count:++count;
+                    counts()
+                })
+                $('.circle ul li').click(function(){
+                    $(this).addClass('select').siblings().removeClass('select');
+                    count = $(this).index() + 1;
+                    counts();
+                })
+                function counts(){
+                        if (count > imgMaxCount){
+                        count = imgMinCount
+                    }else if (count < imgMinCount){
+                        count = imgMaxCount
+                    }
+                    $('.box>.img>li').stop().animate({
+                        opacity: 0  
+                    })
+                    $('.box>.img>li').eq(count - 1).stop().animate({
+                        opacity:1
+                    })
+                    $('.circle ul li').eq(count-1).addClass('select').siblings().removeClass('select');
+                    }
+            })
+        </script>
+
+
+</html>
