@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/jquery.js"></script>    
+    <script src="js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+           padding:0px;
+           margin:0px;
+        }
+        a{
+           text-decoration: none;
+           
+        }
+        ul{
+           list-style-type: none;
+          
+        }
+        body{background-color: #dddddd;}
+       
+        /* background-size:contain; width:100%; height:auto; */
+        *{padding:0px; margin:0px;}
+        #first{width:100%; height:30px; background-color: black;}
+        #first img{margin-left:1200px;}
+        #p1{margin-top: -20px; margin-left:1240px; color:white;} 
+        #content{margin-top: -30px; margin-left:1350px;}
+        #content li{display: inline;}
+        #content li a{color:white;}
+
+
+
+        #nav{border:1px solid #dddddd; width:100%; height:60px;}
+        #bs-1 ul li{display: inline; margin-left: 20px;}
+        #bs-1 ul li a{font-size: larger;}
+        #bs-1 ul li:hover{background-color: chocolate; border-radius:10px;}
+        #bs-1 ul li a:hover{color:#dddddd;}
+        
+
+
+
+        #mainimg{border:1px solid #dddddd; width:100%; height:500px;}
+        
+        
+        
+        
+        #xiangqing{border:1px solid pink; width:85%; height:400px; margin:40px auto; }
+        #jiesong{border:1px solid #dddddd;width:20%; height:400px; float:right; background-color:#14316d;margin-top: -133px;}
+        #jiesong img{margin-top: 100px; margin-left: 80px;}
+        #chakan{border:1px solid #dddddd;height:50px; width:120px; border-radius: 10px; margin-left: 70px;}
+        #chakan a{color:#dddddd; font-size:2em; font-weight:lighter;}
+        
+        
+        #path{border:1px solid #dddddd; width:80%; height:1050px; margin: 60px auto;}
+        #right div{margin-bottom: 25px; margin-left: 5px;}
+        .tupian{height:80px; width:100%; background-color: black; opacity:0.6; margin-top: -80px;}
+
+
+        #shiming{border:1px solid #dddddd;width:85%; height:1300px; margin:60px auto;}
+        #fuwu{height:365px; width:60%; background-color:#14316d; margin-left: 515px; margin-top: -365px;}
+        #zuihou{border:1px solid #14316d; background-color: #14316d; width:100%; height:500px;}
+        #zuihou ul li{border:1px solid #14316d; width:25%; height:350px; margin-top: 50px; margin-left: 80px; display: inline-block;}
+        #zuihou ul li img{padding-left: 50px;}
+        #pinzhi{border:1px solid #14316d; background-color: #14316d; width:100%; height:500px;}
+        #pinzhi ul li{border:1px solid #14316d; width:25%; height:250px; margin-top: 50px; margin-left: 80px; display: inline-block;}
+        #pinzhi ul li p{color:#dddddd; font-size:20px;}
+        #pinzhi ul{margin-top:-380px; margin-left: 100px;}
+
+        #last{border:1px solid black; width:100%; height:500px; background-color: black;; }
+        #last1{border:1px solid black; height:50px; width:600px; margin-top: 20px; margin-left: 20px;}
+        #last1 div{height:40px; width:500px; margin-left: 100px; margin-top: -30px;}
+        #last2{height:50px; width:900px; margin-left: 20px; margin-top:50px;}
+        #last2 div{height:50px; width:900px; margin-left:100px; margin-top:-30px;}
+        #last3{height:50px; width:900px; margin-left: 20px;}
+        #last3 div{height:50px; width:900px; margin-left:100px; margin-top:-20px;}
+        #last4{height:50px; width:900px; margin-left: 20px;}
+        #last4 div{height:50px; width:900px; margin-left:100px; margin-top:-20px;}
+
+        #main1{height: 200px; width:500px; margin-top:-400px; margin-left:170px;}
+        #main2{height: 100px; width:400px; margin-top:-370px; margin-left:600px;}
+    </style>
+</head>
+<body>
+    <div id="first">
+        <img src="img/tell.png">
+        <p id="p1">400-808-8682</p>
+        <!-- <a href="#" id="a1">请登录</a>| -->
+        <div>
+           <ul id="content">
+               <li><a href="#">请登录</a>|</li>
+               <li><a href="#">注册</a></li>
+           </ul>
+        </div>
+    </div>
+
+    <div id="nav">
+        <!-- 图片 -->
+        <nav class="navbar navbar-default" > 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-1">
+                    
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="img/logo.png" style="margin-left: 100px;">
+            
+            </div>
+            <!-- 锚点链接 -->
+            <div class="collapse navbar-collapse" id="bs-1">
+                <ul class="nav navbar-nav" style="margin-left: 250px;">
+                    <li><a href="#first">首页</a></li>
+                    <li><a href="#path">热门路线</a></li>
+                    <li><a href="#xiangqing">签证推荐</a></li>
+                    <li><a href="#shiming">使命愿景</a></li>
+    
+                </ul>  
+            </div> 
+        </nav>
+    </div>
+
+    <div id="mainimg">
+        <img src="img/banner.jpg" style="background-size:contain; width:100%; height:auto;">
+        <div id="main1">
+            <p style="color:white; font-size: 40px;">悠游古欧洲&nbsp;遍览德法瑞意</p>
+            <p style="color:white;">巴黎卢浮宫，塞纳河游船，凡尔赛宫</p>
+            <p style="color:white;">少女峰，大运河游船，金色列车，西庸城堡</p>
+            <p style="color:#ccc;">________________________________________</p>
+        </div>
+
+    </div>
+
+    <div id="xiangqing">
+        <img src="img/Sbanner2.jpg"style="width:80%; height:auto;">
+        <div id="main2">
+            <p style="color:white; font-size: 40px;">机场接送&nbsp;省钱省心</p>
+            <p style="color:white;">提供上海，苏州，无锡市</p>
+            <p style="color:white;">往返机场，码头接送服务，更有包车服务</p>
+           
+        </div>
+        <div id="jiesong">
+            <img src="img/car.png">
+            <p style="color:white; font-size:2em; font-weight: lighter; padding-left:75px;">车辆接送</p>
+            <div id="chakan"><a>查看详情</a></div>
+        </div>
+    </div>
+
+    <p style="text-align:center; font-size:45px; ">热&nbsp;&nbsp;门&nbsp;&nbsp;路&nbsp;&nbsp;线</p>
+    <p style="text-align: center; font-weight: lighter;">Popular &nbsp;tourist &nbsp;routes</p>
+    
+    <div id="path">
+        <div style="float:left; width:50%; height:100%;" >
+            <div>
+                <img src="img/hot1.jpg">
+                <div style="height:118px;width:588px; background-color:black;">
+                    <p style="color:white; padding-left: 20px; padding-top: 20px;">海南三亚5天4晚，纯玩，4晚红树林度假王国</p>
+                    <p style="color:white; padding-left: 20px; padding-top:5px;"><span style="font-size: 1.3em;">￥2580</span>/人起</p>
+                </div>
+                
+            </div>
+
+            <div style="margin-top:5px;"><img src="img/hot2.jpg"><div style="height:118px;width:588px; background-color:black;"><p style="color:white; padding-left: 20px; padding-top: 20px;">德法意瑞欧洲4国，ABCD任意路线由您挑选</p>
+                <p style="color:white; padding-left: 20px; padding-top:5px;"><span style="font-size: 1.3em;">￥7999</span>/人起</p></div></div>
+        </div>
+        <div id="right" style="float:left; width:50%; height:100%; margin-left: -20px;">
+            <div><img src="img/hot3.jpg"><div class="tupian"><p style="color:white; padding-left: 20px; padding-top: 20px;">曼谷+芭提雅&nbsp;国际五星，赠送2220大礼包，决无自费</p>
+                <p style="color:white; padding-left: 20px; "><span style="font-size: 1.3em;">￥2799</span>/人起</p></div></div>
+            <div><img src="img/hot4.jpg"><div class="tupian"><p style="color:white; padding-left: 20px; padding-top: 20px;">日本本州游&nbsp;樱花，寿司，温泉，美食</p>
+                <p style="color:white; padding-left: 20px; "><span style="font-size: 1.3em;">￥5399</span>/人起</p></div></div>
+            <div><img src="img/hot5.jpg"><div class="tupian"><p style="color:white; padding-left: 20px; padding-top: 20px;">斯里兰卡7天6晚全景游&nbsp;&nbsp;保证入住2晚香格里拉</p>
+                <p style="color:white; padding-left: 20px; "><span style="font-size: 1.3em;">￥7999</span>/人起</p></div></div>
+        </div>
+    </div>
+
+    <p style="text-align:center; font-size:45px; ">使&nbsp;&nbsp;命&nbsp;&nbsp;与&nbsp;&nbsp;愿&nbsp;&nbsp;景</p>
+    <p style="text-align: center; font-weight: lighter;">让旅游回归本质，体验纯粹旅游</p>
+    
+    <div id="shiming">
+        <img src="img/mission1.jpg" style="width:40%; height:auto;">
+        <div id="fuwu">
+            <p style="color:white; font-size:3em; text-align: center; padding-top: 100px;">服务理念及优势</p>
+            <p style="color:white; font-size:1em; font-weight: lighter; margin-left: 200px;">
+                "英华逸游"通过重新打造旅游全程中的产品线路设计，出行交通方案，</br>陪游向导服务，
+                增值关怀项目等，为客服提供高品质的旅游体验。英华逸</br>游在泰国，欧洲，等多个国家拥有丰富的旅游资源，
+                同时致力于给用户提</br>供性价比高的产品和服务。
+            </p>
+            
+            
+        </div>
+        <img src="img/mission2.jpg" style="width:100%;">
+        <div id="zuihou">
+            <ul>
+                <!-- <li><img src="img/rorate.png"><img src="img/icon1.png" style="margin-left: -120px; margin-top: -20px;"><p>品质行程</p></li>
+                <li></li>
+                <li></li> -->
+                <li><img src="img/rorate.png"><img src="img/icon1.png" style="margin-top: -220px; margin-left:65px;"><p style="color:white; text-align: center;">旅游达人精心设计，基于口碑反复打磨</br>全网最好，敢跟任何产品比</p></li>
+                <li><img src="img/rorate.png"><img src="img/icon2.png" style="margin-top: -220px; margin-left:65px;"><p style="color:white; text-align: center;">不推自费</br>不进垃圾购物店和伪景点</p></li>
+                <li><img src="img/rorate.png"><img src="img/icon3.png" style="margin-top: -220px; margin-left:65px;"><p style="color:white; text-align: center;">独立成团不散拼</br>只跟亲朋好友一起玩，每天发团</p></li>
+
+            </ul> 
+        </div>
+        <div id="pinzhi">
+            <ul>
+                <li><p>品质行程</p></li>
+                <li><p style="margin-left: 30px;">品质消费</p></li>
+                <li><p style="margin-left: 55px;">品质小团</p></li>
+            </ul>
+        </div>
+    </div>
+    <div id="last">
+        <div id="last1">
+            <span style="padding-top: 20px; padding-left:20px; color:white;">合作伙伴</span>
+            <div>
+                <img src="img/xiecheng.png">
+                <img src="img/feizhu.png">
+                <img src="img/quna.png">
+                <img src="img/suzhou.png">
+            </div>
+        </div>
+        <div id="last2">
+            <span style="padding-top: 20px; padding-left:20px; color:white;">热门位置</span>
+            <div>
+                <p style="color:#ccc; font-weight: lighter; font-size: small;">韩国&nbsp;日本&nbsp;菲律宾&nbsp;越南&nbsp;柬埔寨&nbsp;泰国&nbsp;马来西亚&nbsp;新加坡&nbsp;印度尼西亚&nbsp;印度&nbsp;斯里兰卡&nbsp;土耳其&nbsp;阿联酋&nbsp;西班牙&nbsp;意大利&nbsp;希腊&nbsp;法国&nbsp;比利时&nbsp;荷兰</br>英国&nbsp;瑞士&nbsp;奥地利&nbsp;德国&nbsp;匈牙利&nbsp;俄罗斯&nbsp;捷克&nbsp;芬兰&nbsp;葡萄牙&nbsp;冰岛&nbsp;美国&nbsp;加拿大&nbsp;巴西&nbsp;阿根廷&nbsp;澳大利亚&nbsp;新西兰</p>
+            </div>
+        </div>
+        <div id="last3">
+            <span style=" padding-left:20px; color:white;">主题服务</span>
+            <div><P style="color:#ccc; font-weight: lighter; font-size: small;">海岛度假&nbsp;历史文化&nbsp;探索冒险&nbsp;美食购物&nbsp;都市生活&nbsp;海外游学&nbsp;邮轮度假&nbsp;蜜月摄影&nbsp;亲子乐园</P></div>
+        </div>
+        <div id="last4">
+            <span style=" padding-left:20px; color:white;">友情链接</span>
+            <div><P style="color:#ccc; font-weight: lighter; font-size: small;">马蜂窝&nbsp;穷游&nbsp;booking&nbsp;苏州旅游局&nbsp;驴友网&nbsp;吾爱全球签证中心&nbsp;酒店团购&nbsp;携程旅游攻略&nbsp;天巡职航在线&nbsp;满天飞旅游网&nbsp;中国旅游网&nbsp;澳乐网&nbsp;背包兔旅游行程&nbsp;处境旅游&nbsp;国际酒店&nbsp;广州旅行社&nbsp;517旅行&nbsp;花生游&nbsp;家园网&nbsp;海外婚礼</P></div>
+        </div>
+        <p>__________________________________________________________________________________________________________________________________________________________________________________________________</p></br></br></br>
+        <p style="color:#ccc;text-align: center; font-weight:lighter; font-size: 20px;">2020&nbsp;&nbsp; @苏州英华国际旅游有限公司&nbsp;&nbsp; 版权所有</p>
+
+
+    </div> 
+   
+</body>
+</html>
